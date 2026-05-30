@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #000000,
+        #001f3f,
+        #003366,
+        #004e92
+    );
+    overflow:hidden;
+    position:relative;
+}
+
+/* Cloud Glow Effects */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(0,150,255,0.25);
+    border-radius:50%;
+    filter:blur(120px);
+    top:-150px;
+    left:-100px;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:rgba(0,255,255,0.15);
+    border-radius:50%;
+    filter:blur(120px);
+    bottom:-150px;
+    right:-100px;
+}
+
+.container{
+    width:450px;
+    padding:35px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.4),
+        0 0 20px rgba(0,150,255,0.2);
+    z-index:1;
+}
+
+.container h1{
+    color:white;
+    text-align:center;
+    margin-bottom:25px;
+    font-size:28px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    color:white;
+    margin-bottom:6px;
+    margin-top:12px;
+    font-size:14px;
+}
+
+input,
+select{
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    outline:none;
+    font-size:15px;
+}
+
+input::placeholder{
+    color:#dcdcdc;
+}
+
+select option{
+    color:black;
+}
+
+button{
+    margin-top:25px;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(
+        90deg,
+        #00c6ff,
+        #0072ff
+    );
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(0,200,255,0.6);
+}
+
+.result{
+    margin-top:20px;
+    text-align:center;
+    font-size:20px;
+    color:#00ff99;
+    font-weight:bold;
+}
